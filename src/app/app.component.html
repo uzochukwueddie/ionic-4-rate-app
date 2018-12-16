@@ -1,3 +1,45 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu id="menu-avatar">
+    <ion-content>
+      <div>
+        <ion-row style="align-items:center">
+          <ion-col col-12 class="imgCol">
+            <img *ngIf="user" class="user-avatar round" src="http://res.cloudinary.com/rateapp/image/upload/v{{user.imageVersion}}/{{user.imageId}}">
+          </ion-col>
+        </ion-row>
+        <ion-row style="justify-content: center">
+          <h3 *ngIf="user">{{user.fullname}}</h3>
+        </ion-row>
+      </div>
+      
+      <ion-list no-lines class="ion-list-hydrated">
+        <ion-menu-toggle *ngFor="let p of pages">
+          <ion-item [href]="p.url">
+            <ion-icon [name]="p.icon" slot="start"></ion-icon>
+            <ion-label>
+              {{ p.title }}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item (click)="settings()">
+            <ion-icon name="settings" slot="start"></ion-icon>
+            <ion-label>Settings</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item (click)="logout()">
+            <ion-icon name="log-out" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    
+      </ion-content>
+    
+    </ion-menu>
+  
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>

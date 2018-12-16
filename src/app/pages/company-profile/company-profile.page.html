@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-row>
+      <ion-col>
+        <ion-title>Profile</ion-title>
+      </ion-col>
+
+      <ion-col>
+        <button class="review" icon-end ion-button outline (click)="viewReviews(profile)">Reviews</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <span>
+      <ion-button expand="block" class="btn1" (click)="reviewPage(profile)">Write Reviews</ion-button>
+    </span>
+    <span>
+      <ion-button expand="block" class="btn2" (click)="employeeRegister(profile)">Register as an Employee</ion-button>
+    </span>
+  
+    <ion-card class="card1">
+      <ion-card-content>
+        <ion-card-title class="card-title">
+          {{ profile.companyname }}
+        </ion-card-title>
+  
+        <p class="pCity">
+          <ion-icon name="pin" class="iconClass"></ion-icon>
+          <span class="pSpan">
+            {{profile.city}}, {{profile.country}}
+          </span>
+        </p>
+  
+        <p class="pSector">
+          <ion-icon name="archive" class="iconClass"></ion-icon>
+          {{profile.sector}}
+        </p>
+  
+        <p class="pSite">
+          <ion-icon name="ios-link" class="iconClass"></ion-icon>
+          {{profile.website}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  
+  
+    <ion-card class="card2">
+        <ion-card-content>
+            <ion-row>
+              <ion-col>
+                <ion-row class="pRow">
+                  <p>{{profile.rating.length}} ratings received</p>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+  
+            <ion-row>
+              <ion-col>
+                <ion-row class="pRow1">
+                  <p>{{ratingSum(profile.ratingOverall)}} Total Stars</p>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+  
+            <ion-row>
+              <ion-col>
+                <ion-row class="pRow2">
+                  <span class="avg">
+                    <app-newrating [ratenumber]="averageRating(profile.ratingOverall)"></app-newrating>
+                    <p>({{averageRating(profile.ratingOverall)}})</p>
+                  </span>
+                </ion-row>
+            
+                <ion-row class="pText2">
+                  <p>Based on {{profile.rating.length}} rating(s)</p>
+                </ion-row>
+  
+              </ion-col>
+            </ion-row>
+  
+        </ion-card-content>
+      </ion-card>
+  
+      <ion-card class="card3">
+        <ion-card-content>
+          <ion-row>
+            <ion-col class="col1">
+              Culture and Values
+            </ion-col>
+            <ion-col class="col2">
+              <app-newrating [ratenumber]="averageRating(profile.cultureTotal)"></app-newrating>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="col1">
+              Compensation
+            </ion-col>
+            <ion-col class="col2">
+              <app-newrating [ratenumber]="averageRating(profile.benefitsTotal)"></app-newrating>
+            </ion-col>
+          </ion-row>
+  
+          <ion-row>
+            <ion-col class="col1">
+              Worklife Balance
+            </ion-col>
+            <ion-col class="col2">
+              <app-newrating [ratenumber]="averageRating(profile.balanceTotal)"></app-newrating>
+            </ion-col>
+          </ion-row>
+  
+          <ion-row>
+            <ion-col class="col1">
+              Speed of Service
+            </ion-col>
+            <ion-col class="col2">
+              <app-newrating [ratenumber]="averageRating(profile.speedTotal)"></app-newrating>
+            </ion-col>
+          </ion-row>
+  
+        </ion-card-content>
+      </ion-card>
+  
+</ion-content>
+
+  
+  

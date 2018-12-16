@@ -1,0 +1,54 @@
+ion-content{
+    ion-avatar img{
+       border-radius: 0px !important;
+       width: 50px !important;
+       height: 50px !important;
+       max-width: 100px;
+       max-height: 100px; 
+       margin-top: 25px;
+    }
+
+    .rowCol{
+        margin-top: 3px;
+        height: auto;
+        bottom: -3px !important;
+        padding-bottom: 0px !important;
+        color: var(--ion-color-graycolor);
+        padding-left: 15px !important;
+    }
+
+    .companyname {
+        width: auto !important;
+        color: #4aa1f3;
+        font-weight: bold;
+        font-size: 18px;
+        padding-left: 5px !important;
+    }
+
+    ion-icon {
+        padding-left: 5px !important;
+        color: #4aa1f3 !important;
+        margin-left: -3px !important;
+    }
+
+    .dataCol {
+        padding: 0px !important;
+        // margin-top: 4px !important;
+        width: auto !important;
+    }
+
+    .sectorCol {
+        margin: -10px 0px 0px -2px !important;
+    }
+
+    .rating{
+        padding: 0px !important;
+        margin: 0px !important;
+        margin-right: 5px !important;
+        display: flex !important;
+    }
+
+    .avg{
+        display: flex !important;
+    }
+}

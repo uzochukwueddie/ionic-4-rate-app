@@ -1,0 +1,42 @@
+.label-stacked {
+    font-size: 17px;
+    font-weight: 500;
+    float: left;
+}
+
+ion-item {
+    --border-style: inherit !important;
+}
+
+ion-grid {
+    margin-left: 9px !important;
+}
+
+ion-range{
+    padding: 0px !important;
+    margin-left: 12px !important;
+}
+
+ion-textarea {
+    margin-left: -3px !important;
+}
+
+.item-inner {
+    border: none !important;
+}
+
+.item-inner .button {
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ion-textarea{
+    border: 1px solid #4aa1f3;
+    height: 100px;
+    padding-top: 0px !important;
+}
+
+.grid .label-md{
+    padding-left: 10px;
+}

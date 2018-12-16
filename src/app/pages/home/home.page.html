@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+    <h3 class="header" *ngIf="user">Hello, {{user.fullname}}</h3>
+    <p class="text-content">
+      What would you like to do today?
+    </p>
+  
+    <ion-card class="card1" mode="md">
+      <ion-icon name="log-in"></ion-icon>
+      <ion-card-header class="header1">
+        Add Company
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Add company profile. Registered employees can give reviews.
+        </p>
+  
+        <button class="btn1 button" ion-button block (click)="addCompany()">Add</button>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="card2">
+      <ion-icon name="search"></ion-icon>
+      <ion-card-header class="header1">
+        Search
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Search through our business catalogue and find your best partner.
+        </p>
+  
+        <button class="btn2 button" ion-button block (click)="goToSearch()">Search</button>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card class="card3">
+      <ion-icon name="star"></ion-icon>
+      <ion-card-header class="header1">
+        Rate
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Rate and review other companies and get your company reviewed.
+        </p>
+  
+        <button class="btn3 button" ion-button block (click)="reviewPage()">Rate</button>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>

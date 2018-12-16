@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img *ngIf="user" src="http://res.cloudinary.com/rateapp/image/upload/v{{user.imageVersion}}/{{user.imageId}}">
+      </ion-avatar>
+
+      <ion-label class="account">
+        Account
+        <p class="name" *ngIf="user">{{user.fullname}}</p>
+      </ion-label>
+
+      <button class="btn" item-end (click)="addImage()">Add Image</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="user">
+    <ion-list-header class="list">Companies</ion-list-header>
+    <ion-item *ngFor="let usercompany of user.companies">
+      <ion-avatar item-start>
+        <!-- <img src="http://res.cloudinary.com/rateapp/image/upload/v{{usercompany.company.imageVersion}}/{{usercompany.company.imageId}}"> -->
+        <img *ngIf="user" src="http://res.cloudinary.com/rateapp/image/upload/v{{user.imageVersion}}/{{user.imageId}}">
+      </ion-avatar>
+
+      <ion-label class="company">
+        {{usercompany.company.companyname}}
+      </ion-label>
+
+      <button class="btn" item-end (click)="addLogo(usercompany.company)">Add Logo</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+  

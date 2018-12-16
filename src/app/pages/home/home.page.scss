@@ -1,0 +1,108 @@
+ion-content{
+    --background: white;
+    --color: var(--ion-color-light);
+
+    ion-card {
+        --color: var(--ion-color-light);
+    }
+
+    .header {
+        text-align: center;
+        color: #73879C;
+        font-size: 30px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+    .header1 {
+        text-align: center;
+        --color: var(--ion-color-light);
+        font-size: 30px;
+        margin-top: -20px;
+        font-weight: 600;
+    }
+
+    .text-content{
+        text-align: center;
+        color: #73879C;
+        font-size: 20px;
+        margin-bottom: 35px;
+        margin-top: 0px;
+    }
+
+    .card1 {
+        border: none !important;
+        border-radius: 5%;
+        background: rgba(241, 140, 72, 0.781);
+        height: 250px;
+        margin-bottom: 20px !important;
+    }
+
+    .card2 {
+        border: none !important;
+        border-radius: 5%;
+        background: rgba(70, 224, 204, 0.8);
+        height: 250px;
+        margin-bottom: 20px !important;
+    }
+
+    .card3 {
+        border: none !important;
+        border-radius: 5%;
+        background: rgba(97, 204, 70, 0.8);
+        height: 250px;
+        margin-bottom: 30px !important;
+    }
+
+    .header.hydrated{
+        --color: var(--ion-color-light);
+        text-align: center !important;
+        font-size: 1.8em !important;
+        font-weight: 700;
+        padding-top: 0px !important;
+        padding-bottom: 10px !important;
+    }
+
+    ion-card-content {
+        margin: 0 auto;
+        text-align: center;
+
+         p{
+            --color: var(--ion-color-light);
+            text-align: center !important;
+            font-size: 17px !important;
+            margin-bottom: 10px !important;
+        }
+    
+        .button{
+            color: white !important;
+            width: 50%;
+            height: 34px;
+            margin: 0 auto !important;
+            text-align: center !important;
+            border: 1px solid white;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    
+        .btn1{
+            background: rgba(70, 224, 204, 0.8);
+        }
+    
+        .btn2{
+            background: rgba(97, 204, 70, 0.8);
+        }
+    
+        .btn3{
+            background: rgba(241, 140, 72, 0.781);
+        }
+    }
+
+    ion-icon{
+        font-size: 70px;
+        text-align: center !important;
+        margin-top: 10px !important;
+        margin-left: 135px !important;
+    }
+}
